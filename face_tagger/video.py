@@ -11,9 +11,9 @@ class FFmpegError(BaseException):
 
 
 class FrameMIME(enum.Enum):
-    PNG = "PNG"
-    JPG = "JPG"
-    JPEG = "JPEG"
+    png = "png"
+    jpg = "jpg"
+    jpeg = "jpeg"
 
 
 class Movie:
@@ -44,7 +44,7 @@ class Movie:
     def extract_frames(
         self,
         directory: pathlib.Path,
-        mime: FrameMIME = "PNG",
+        mime: FrameMIME = "jpeg",
         rate: int = 1,
         zero_pad: int = 6,
     ) -> pathlib.Path:
